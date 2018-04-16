@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Tarefas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let tarefa of tarefas | async" (click)="openTarefa(tarefa)" >
+          {{ tarefa.name }}
+          
+    </button>  
+  </ion-list>
+ 
+ 
+  <ion-fab bottom right>
+    <button ion-fab color="primary" (click)="criarTarefa()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
